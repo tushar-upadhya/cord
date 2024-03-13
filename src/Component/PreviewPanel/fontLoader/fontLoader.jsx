@@ -1,14 +1,7 @@
-import React, { useEffect } from 'react'
-import GoogleFontLoader from 'react-google-font-loader';
+import React, { useEffect } from "react";
 
 export default function FontLoader(props) {
+  useEffect(() => {}, [props.fontList]);
 
-    useEffect(() => {
-    }, [props.fontList])
-
-    return (
-        <>
-            {(props.fontList.length > 0) && <GoogleFontLoader fonts={props.fontList} />}
-        </>
-    )
+  return <>{props.fontList.length > 0 && <div fonts={props.fontList} />}</>;
 }
